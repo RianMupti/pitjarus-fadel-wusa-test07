@@ -4,14 +4,14 @@ var router = express.Router();
 const visitController = require('../controller/visit')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/visit/:visit_id' , visitController.getVisit)
-router.post('/visit' , visitController.getReportDisplay)
-router.post('/product-visit' , visitController.getReportProduct)
-router.post('/batch' , visitController.batchReportProduct)
+router.get('/visit/:visit_id', visitController.getVisit)
+router.post('/visit', visitController.getReportDisplay)
+router.post('/product-visit', visitController.getReportProduct)
+router.post('/batch', visitController.batchReportProduct)
 
 
 module.exports = router;
